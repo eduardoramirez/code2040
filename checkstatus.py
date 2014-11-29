@@ -1,7 +1,5 @@
 import httplib
 import json
-from datetime import datetime, timedelta
-from dateutil import parser
 
 conn = httplib.HTTPConnection('challenge.code2040.org')
 
@@ -13,6 +11,6 @@ conn.request('POST', '/api/status', token, headers)
 
 res = conn.getresponse()
 
-ret  = json.loads(res.read().decode())#.values()[0].values()
+ret  = json.loads(res.read())
 
 print ret
