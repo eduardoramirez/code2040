@@ -1,10 +1,11 @@
-import common
 from datetime import datetime, timedelta
 from dateutil import parser
 
+# Reverse the string
 def stageI(str):
   return str[::-1]
 
+# Find index of needle in haystack list
 def stageII(needle, haystack):
   try:
     index = haystack.index(needle)
@@ -14,6 +15,7 @@ def stageII(needle, haystack):
     return -1
   return index
 
+# Return all elements that do not begin with prefix
 def stageIII(prefix, strings):
   toReturn = []
 
@@ -23,6 +25,7 @@ def stageIII(prefix, strings):
 
   return toReturn
 
+# Add the interval to the date 
 def stageIV(interval, date):
   time = parser.parse(date)
 
