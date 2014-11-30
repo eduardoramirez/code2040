@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CODE2040</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.js"></script>
+    
+    <link rel="stylesheet" type="text/css" class="ui" href="packaged/css/semantic.min.css">
+
+    <script src="packaged/javascript/semantic.min.js"></script>
+    <script src="misc.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="header mainHeader">
+      <h1>CODE2040 API Challenge!</h1>
+    </div>
+
+    <div class="content mainContent">
+
+
+      <div class="ui four tabular filter menu">
+        <a class="active item" data-tab="stage1">Stage I</a>
+        <a class="item" data-tab="stage2">Stage II</a>
+        <a class="item" data-tab="stage3">Stage III</a>
+        <a class="item" data-tab="stage4">Stage IV</a>        
+      </div>
+        
+
+
+      <div class="ui divided inbox selection list active tab" data-tab="stage1">
+      
+        <div class="stage1">
+          <div class="ui message">
+            <div class="header">
+              Stage I
+            </div>
+            <p>The first one is straightforward. You’re going to reverse a string. That is, if the API says “cupcake,” you’re going to send back “ekacpuc.”</p>
+          </div>
+
+          <div class="ui grid" id="grid">
+            <div class="twelve wide column"></div>
+            
+            <div class="two column row">
+              <div class="six wide column">
+                <div class="ui teal labeled big icon button" id="fetchString">
+                  <i class="magnet icon"></i>
+                  Fetch String
+                </div>
+              </div>
+
+              <div class="six wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="String" value="" id="stringLoc" readonly="readonly">
+                </div>
+              </div>
+            </div>
+
+            <div class="two column row">
+              <div class="six wide column">
+                <div class="ui disabled big button" id="reverseString">Reverse</div>
+              </div>
+
+              <div class="six wide column">
+               
+                <div class="inline field">
+                  <div class="ui big input" id="reversedClass">
+                    <input type="text" id="reversedLoc" value="" placeholder="Reversed" readonly="readonly">
+                  </div>
+                  <div class="ui pointing bottom label" id="reversedWorks">
+                    It works!
+                  </div>
+                  <div class="ui pointing bottom label" id="reversedFailed">
+                    Oops, seems liked reversing failed.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <br><br>
+
+          <div class="ui medium buttons">
+            <div class="ui button" id="resetStage1">Reset</div>
+            <div class="or"></div>
+            <div class="ui positive button" id="submitStage1">Submit</div>
+          </div>
+          
+          <br><br>
+          <div class="ui green icon message" id="reversedPass">
+            <i class="checkmark icon"></i>
+            <div class="content">
+              <div class="header">
+                WooHoo!! You passed!
+              </div>
+            </div>
+          </div>
+
+          <div class="ui red icon message" id="reversedNotPass">
+            <i class="remove icon"></i>
+            <div class="content">
+              <div class="header">
+                Eeek, your solution failed!
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="ui divided inbox selection list active tab" data-tab="stage2">
+        <div class="stage2">
+          <div class="ui message">
+            <div class="header">
+              Stage II
+            </div>
+            <p>We’re going to send you a dictionary with two values and keys. The first value, needle, is a string. The second value, haystack, is an array of strings. You’re going to tell the API where the needle is in the array.</p>
+          </div>
+
+          <div class="ui grid" id="grid2">
+            <div class="twelve wide column"></div>
+            
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui teal labeled big icon button" id="fetchDict">
+                  <i class="magnet icon"></i>
+                  Fetch
+                </div>
+              </div>
+
+              <div class="three wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="Needle" value="" id="needleLoc" readonly="readonly">
+                </div>
+              </div>
+
+              <div class="seven wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="Haystack" value="" id="haystackLoc" readonly="readonly">
+                </div>
+              </div>
+            </div>
+
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui disabled big button" id="findNeedle">Find Needle</div>
+              </div>
+
+              <div class="six wide column">
+                <div class="ui big input" id="foundClass">
+                  <input type="text" id="indexLoc" value="" placeholder="Index of Needle" readonly="readonly">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <br><br>
+
+          <div class="ui medium buttons">
+            <div class="ui button" id="resetStage2">Reset</div>
+            <div class="or"></div>
+            <div class="ui positive button" id="submitStage2">Submit</div>
+          </div>
+          
+          <br><br>
+          <div class="ui green icon message" id="needlePass">
+            <i class="checkmark icon"></i>
+            <div class="content">
+              <div class="header">
+                WooHoo!! You passed!
+              </div>
+            </div>
+          </div>
+
+          <div class="ui red icon message" id="needleNotPass">
+            <i class="remove icon"></i>
+            <div class="content">
+              <div class="header">
+                Eeek, your solution failed!
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="ui divided inbox selection list active tab" data-tab="stage3">
+        <div class="stage3">
+          <div class="ui message">
+              <div class="header">
+                Stage III
+              </div>
+              <p>In this challenge, the API is going to give you another dictionary. The first value, prefix, is a string. The second value, array, is an array of strings. Your job is to return an array containing only the strings that do not start with that prefix.</p>
+          </div>
+
+          <div class="ui grid" id="grid3">
+            <div class="twelve wide column"></div>
+            
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui teal labeled big icon button" id="fetchArray">
+                  <i class="magnet icon"></i>
+                  Fetch
+                </div>
+              </div>
+
+              <div class="four wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="Prefix" value="" id="prefixLoc" readonly="readonly">
+                </div>
+              </div>
+
+              <div class="six wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="Array" value="" id="arrayLoc" readonly="readonly">
+                </div>
+              </div>
+            </div>
+
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui big button" id="findPrefix">Calculate</div>
+              </div>
+
+              <div class="ten wide column">
+               
+                <div class="inline field">
+                  <div class="ui big input" id="answerClass">
+                    <input type="text" id="answerLoc" value="" placeholder="Strings that don't contain prefix" readonly="readonly">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <br><br>
+
+          <div class="ui medium buttons">
+            <div class="ui button" id="resetStage3">Reset</div>
+            <div class="or"></div>
+            <div class="ui positive button" id="submitStage3">Submit</div>
+          </div>
+          
+          <br><br>
+          <div class="ui green icon message" id="prefixPass">
+            <i class="checkmark icon"></i>
+            <div class="content">
+              <div class="header">
+                WooHoo!! You passed!
+              </div>
+            </div>
+          </div>
+
+          <div class="ui red icon message" id="prefixNotPass">
+            <i class="remove icon"></i>
+            <div class="content">
+              <div class="header">
+                Eeek, your solution failed!
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="ui divided inbox selection list active tab" data-tab="stage4">
+        <div class="stage4">
+          <div class="ui message">
+              <div class="header">
+                Stage IV
+              </div>
+              <p>The value for datestamp is a string, formatted as an ISO 8601 datestamp. The value for interval is a number of seconds.You’re going to add the interval to the date, then return the resulting date to the API.</p>
+          </div>
+
+          <div class="ui grid" id="grid4">
+            <div class="fourteen wide column"></div>
+            
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui teal labeled big icon button" id="fetchDate">
+                  <i class="magnet icon"></i>
+                  Fetch
+                </div>
+              </div>
+
+              <div class="three wide column">
+                <div class="ui big input">
+                    <input type="text" placeholder="Interval" value="" id="intervalLoc" readonly="readonly">
+                </div>
+              </div>
+
+              <div class="eight wide column">
+                <div class="ui big  input">
+                    <input type="text" placeholder="Date" value="" id="dateLoc" readonly="readonly">
+                </div>
+              </div>
+            </div>
+
+            <div class="two column row">
+              <div class="four wide column">
+                <div class="ui big button" id="newTime">Calculate</div>
+              </div>
+
+              <div class="ten wide column">
+                <div class="ui big input" id="newDataClass">
+                  <input type="text" id="newdateLoc" value="" placeholder="New Date" readonly="readonly">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <br><br>
+
+          <div class="ui medium buttons">
+            <div class="ui button" id="resetStage4">Reset</div>
+            <div class="or"></div>
+            <div class="ui positive button" id="submitStage4">Submit</div>
+          </div>
+          
+          <br><br>
+          <div class="ui green icon message" id="datePass">
+            <i class="checkmark icon"></i>
+            <div class="content">
+              <div class="header">
+                WooHoo!! You passed!
+              </div>
+            </div>
+          </div>
+
+          <div class="ui red icon message" id="dateNotPass">
+            <i class="remove icon"></i>
+            <div class="content">
+              <div class="header">
+                Eeek, your solution failed!
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="common.js"></script>
+    <script>
+
+      var info = {
+        'email': 'edyr96@hotmail.com',
+        'github': 'https://github.com/eduardoramirez/code2040'
+      };
+
+      var token = getToken(info);
+
+      ////////////////////// Stage 1 //////////////////////////
+      $('#fetchString').click(function(){
+        $('#reversedLoc').val("");
+        $('#stringLoc').toggleClass('loading');
+        var string = getData('/api/getstring', token);
+        $('#stringLoc').toggleClass('loading');
+
+        $('#stringLoc').val(string.result);
+
+        $('#reverseString').removeClass('disabled');
+      });
+
+      $('#reverseString').click(function(){
+        var string = $('#stringLoc').val();
+        var reversed = stageI(string);
+        $('#reversedLoc').val(reversed);
+        $('#reverseString').addClass('disabled');
+
+        if (string == stageI(reversed)) {
+          $('#reversedWorks').show();
+        }
+        else{
+          $('#reversedClass').toggleClass('error');
+          $('#reversedFailed').show();
+        }
+      });
+
+      $('#resetStage1').click(function(){
+        $('#reversedLoc').val("");
+        $('#stringLoc').val("");
+        $('#reversedWorks').hide();
+        $('#reversedFailed').hide();
+        $('#reversedPass').hide();
+        $('#reversedNotPass').hide();
+        $('#reverseString').addClass('disabled');
+      });
+
+      $('#submitStage1').click(function(){
+        var reversed = $('#reversedLoc').val();
+        var status;
+
+        if(reversed){
+          status = sendData('/api/validatestring', token, {'string': reversed});
+          
+          if(status){
+            $('#reversedPass').show();
+          }
+          else{
+            $('#reversedNotPass').show();
+          }
+          $('#reverseString').addClass('disabled');
+        }
+      });
+
+      ////////////////////// Stage 2 //////////////////////////
+      var arr;
+      $('#fetchDict').click(function(){
+        $('#indexLoc').val("");
+        $('#needleLoc').toggleClass('loading');
+        var dict = getData('/api/haystack', token);
+        $('#needleLoc').toggleClass('loading');
+
+        arr = dict.result.haystack;
+        hay = "";
+        for(var i = 0; i < dict.result.haystack.length; i++){
+          if(i == dict.result.haystack.length - 1) {
+            hay += dict.result.haystack[i];
+          }
+          else {
+            hay += dict.result.haystack[i] + ", ";
+          }
+        }
+
+        $('#needleLoc').val(dict.result.needle);
+        $('#haystackLoc').val(hay);
+
+        $('#findNeedle').removeClass('disabled');
+      });
+    
+      $('#findNeedle').click(function(){
+        var needle = $('#needleLoc').val();
+        var index = stageII(needle, arr);
+        $('#indexLoc').val(index);
+        $('#findNeedle').addClass('disabled');
+      });
+
+      $('#resetStage2').click(function(){
+        $('#needleLoc').val("");
+        $('#haystackLoc').val("");
+        $('#indexLoc').val("");
+        $('#needlePass').hide();
+        $('#needleNotPass').hide();
+
+        $('#findNeedle').addClass('disabled');
+      });
+
+      $('#submitStage2').click(function(){
+        var index = $('#indexLoc').val();
+        var status;
+
+        if(index){
+          status = sendData('/api/validateneedle', token, {'needle': index});
+          
+          if(status){
+            $('#needlePass').show();
+          }
+          else{
+            $('#needleNotPass').show();
+          }
+          $('#findNeedle').addClass('disabled');
+        }
+      });
+
+      ////////////////////// Stage 3 //////////////////////////
+      var ar;
+      var answer;
+      $('#fetchArray').click(function(){
+        $('#answerLoc').val("");
+        $('#prefixLoc').toggleClass('loading');
+        var data = getData('/api/prefix', token);
+        $('#prefixLoc').toggleClass('loading');
+
+        ar = data.result.array;
+        array = "";
+        for(var i = 0; i < data.result.array.length; i++){
+          if(i == data.result.array.length - 1) {
+            array += data.result.array[i];
+          }
+          else {
+            array += data.result.array[i] + ", ";
+          }
+        }
+
+        $('#prefixLoc').val(data.result.prefix);
+        $('#arrayLoc').val(array);
+
+        $('#findPrefix').removeClass('disabled');
+      });
+
+      $('#findPrefix').click(function(){
+        var prefix = $('#prefixLoc').val();
+
+        var ans = stageIII(prefix, ar);
+        answer = ans;
+        var array = "";
+
+        for(var i = 0; i < ans.length; i++){
+          if(i == ans.length - 1) {
+            array += ans[i];
+          }
+          else {
+            array += ans[i] + ", ";
+          }
+        }
+
+        $('#answerLoc').val(array);
+
+        $('#findPrefix').addClass('disabled');
+      });
+
+      $('#resetStage3').click(function(){
+        $('#prefixLoc').val("");
+        $('#answerLoc').val("");
+        $('#arrayLoc').val("");
+        $('#prefixPass').hide();
+        $('#prefixNotPass').hide();
+        $('#findPrefix').addClass('disabled');
+      });
+
+      $('#submitStage3').click(function(){
+        var index = $('#answerLoc').val();
+        var status;
+
+        if(index){
+          status = sendData('/api/validateprefix', token, {'array': answer});
+          
+          if(status){
+            $('#prefixPass').show();
+          }
+          else{
+            $('#prefixNotPass').show();
+          }
+
+          $('#findPrefix').addClass('disabled');
+        }
+      });
+
+      ////////////////////// Stage 3 //////////////////////////
+      var date;
+      var newdate;
+      $('#fetchDate').click(function(){
+        $('#newdateLoc').val("");
+        $('#intervalLoc').toggleClass('loading');
+        var data = getData('/api/time', token);
+        $('#intervalLoc').toggleClass('loading');
+
+        date = data.result.datestamp;
+
+        var tmp = new Date(date);
+        $('#intervalLoc').val(data.result.interval);
+        $('#dateLoc').val(tmp.toISOString());
+
+        $('#newTime').removeClass('disabled');
+      });
+
+      $('#newTime').click(function(){
+        var interval = parseInt($('#intervalLoc').val());
+
+        var ans = stageIV(interval, date);
+        newdate = ans;
+
+        var tmp = new Date(newdate);
+        $('#newdateLoc').val(tmp.toISOString());
+
+        $('#newTime').addClass('disabled');
+      });
+
+      $('#resetStage4').click(function(){
+        $('#intervalLoc').val("");
+        $('#dateLoc').val("");
+        $('#newdateLoc').val("");
+        $('#datePass').hide();
+        $('#dateNotPass').hide();
+        $('#newTime').addClass('disabled');
+      });
+
+      $('#submitStage4').click(function(){
+        var d = $('#newdateLoc').val();
+        var status;
+
+        if(d){
+          status = sendData('/api/validatetime', token, {'datestamp': newdate});
+          
+          if(status){
+            $('#datePass').show();
+          }
+          else{
+            $('#dateNotPass').show();
+          }
+
+          $('#newTime').addClass('disabled');
+        }
+      });
+    </script>
+  </body>
+</html>
