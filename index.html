@@ -24,21 +24,14 @@
     <div class="header mainHeader">
       <h1>CODE2040 API Challenge!</h1>
     </div>
-
     <div class="content mainContent">
-
-
       <div class="ui four tabular filter menu">
         <a class="active item" data-tab="stage1">Stage I</a>
         <a class="item" data-tab="stage2">Stage II</a>
         <a class="item" data-tab="stage3">Stage III</a>
         <a class="item" data-tab="stage4">Stage IV</a>        
       </div>
-        
-
-
       <div class="ui divided inbox selection list active tab" data-tab="stage1">
-      
         <div class="stage1">
           <div class="ui message">
             <div class="header">
@@ -46,10 +39,8 @@
             </div>
             <p>The first one is straightforward. You’re going to reverse a string. That is, if the API says “cupcake,” you’re going to send back “ekacpuc.”</p>
           </div>
-
           <div class="ui grid" id="grid">
             <div class="twelve wide column"></div>
-            
             <div class="two column row">
               <div class="six wide column">
                 <div class="ui teal labeled big icon button" id="fetchString">
@@ -57,21 +48,17 @@
                   Fetch String
                 </div>
               </div>
-
               <div class="six wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="String" value="" id="stringLoc" readonly="readonly">
                 </div>
               </div>
             </div>
-
             <div class="two column row">
               <div class="six wide column">
                 <div class="ui disabled big button" id="reverseString">Reverse</div>
               </div>
-
               <div class="six wide column">
-               
                 <div class="inline field">
                   <div class="ui big input" id="reversedClass">
                     <input type="text" id="reversedLoc" value="" placeholder="Reversed" readonly="readonly">
@@ -84,19 +71,14 @@
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
-
           <br><br>
-
           <div class="ui medium buttons">
             <div class="ui button" id="resetStage1">Reset</div>
             <div class="or"></div>
             <div class="ui positive button" id="submitStage1">Submit</div>
           </div>
-          
           <br><br>
           <div class="ui green icon message" id="reversedPass">
             <i class="checkmark icon"></i>
@@ -106,7 +88,6 @@
               </div>
             </div>
           </div>
-
           <div class="ui red icon message" id="reversedNotPass">
             <i class="remove icon"></i>
             <div class="content">
@@ -115,10 +96,8 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
       <div class="ui divided inbox selection list active tab" data-tab="stage2">
         <div class="stage2">
           <div class="ui message">
@@ -127,10 +106,8 @@
             </div>
             <p>We’re going to send you a dictionary with two values and keys. The first value, needle, is a string. The second value, haystack, is an array of strings. You’re going to tell the API where the needle is in the array.</p>
           </div>
-
           <div class="ui grid" id="grid2">
             <div class="twelve wide column"></div>
-            
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui teal labeled big icon button" id="fetchDict">
@@ -138,44 +115,34 @@
                   Fetch
                 </div>
               </div>
-
               <div class="three wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="Needle" value="" id="needleLoc" readonly="readonly">
                 </div>
               </div>
-
               <div class="seven wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="Haystack" value="" id="haystackLoc" readonly="readonly">
                 </div>
               </div>
             </div>
-
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui disabled big button" id="findNeedle">Find Needle</div>
               </div>
-
               <div class="six wide column">
                 <div class="ui big input" id="foundClass">
                   <input type="text" id="indexLoc" value="" placeholder="Index of Needle" readonly="readonly">
                 </div>
               </div>
-
             </div>
-
           </div>
-
-
           <br><br>
-
           <div class="ui medium buttons">
             <div class="ui button" id="resetStage2">Reset</div>
             <div class="or"></div>
             <div class="ui positive button" id="submitStage2">Submit</div>
           </div>
-          
           <br><br>
           <div class="ui green icon message" id="needlePass">
             <i class="checkmark icon"></i>
@@ -185,7 +152,6 @@
               </div>
             </div>
           </div>
-
           <div class="ui red icon message" id="needleNotPass">
             <i class="remove icon"></i>
             <div class="content">
@@ -194,12 +160,8 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
       </div>
-
       <div class="ui divided inbox selection list active tab" data-tab="stage3">
         <div class="stage3">
           <div class="ui message">
@@ -208,10 +170,8 @@
               </div>
               <p>In this challenge, the API is going to give you another dictionary. The first value, prefix, is a string. The second value, array, is an array of strings. Your job is to return an array containing only the strings that do not start with that prefix.</p>
           </div>
-
           <div class="ui grid" id="grid3">
             <div class="twelve wide column"></div>
-            
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui teal labeled big icon button" id="fetchArray">
@@ -219,47 +179,36 @@
                   Fetch
                 </div>
               </div>
-
               <div class="four wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="Prefix" value="" id="prefixLoc" readonly="readonly">
                 </div>
               </div>
-
               <div class="six wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="Array" value="" id="arrayLoc" readonly="readonly">
                 </div>
               </div>
             </div>
-
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui big button" id="findPrefix">Calculate</div>
               </div>
-
               <div class="ten wide column">
-               
                 <div class="inline field">
                   <div class="ui big input" id="answerClass">
                     <input type="text" id="answerLoc" value="" placeholder="Strings that don't contain prefix" readonly="readonly">
                   </div>
                 </div>
               </div>
-
             </div>
-
           </div>
-
-
           <br><br>
-
           <div class="ui medium buttons">
             <div class="ui button" id="resetStage3">Reset</div>
             <div class="or"></div>
             <div class="ui positive button" id="submitStage3">Submit</div>
           </div>
-          
           <br><br>
           <div class="ui green icon message" id="prefixPass">
             <i class="checkmark icon"></i>
@@ -269,7 +218,6 @@
               </div>
             </div>
           </div>
-
           <div class="ui red icon message" id="prefixNotPass">
             <i class="remove icon"></i>
             <div class="content">
@@ -278,12 +226,8 @@
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
-
-
       <div class="ui divided inbox selection list active tab" data-tab="stage4">
         <div class="stage4">
           <div class="ui message">
@@ -292,10 +236,8 @@
               </div>
               <p>The value for datestamp is a string, formatted as an ISO 8601 datestamp. The value for interval is a number of seconds.You’re going to add the interval to the date, then return the resulting date to the API.</p>
           </div>
-
           <div class="ui grid" id="grid4">
             <div class="fourteen wide column"></div>
-            
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui teal labeled big icon button" id="fetchDate">
@@ -303,44 +245,34 @@
                   Fetch
                 </div>
               </div>
-
               <div class="three wide column">
                 <div class="ui big input">
                     <input type="text" placeholder="Interval" value="" id="intervalLoc" readonly="readonly">
                 </div>
               </div>
-
               <div class="eight wide column">
                 <div class="ui big  input">
                     <input type="text" placeholder="Date" value="" id="dateLoc" readonly="readonly">
                 </div>
               </div>
             </div>
-
             <div class="two column row">
               <div class="four wide column">
                 <div class="ui big button" id="newTime">Calculate</div>
               </div>
-
               <div class="ten wide column">
                 <div class="ui big input" id="newDataClass">
                   <input type="text" id="newdateLoc" value="" placeholder="New Date" readonly="readonly">
                 </div>
               </div>
-
             </div>
-
           </div>
-
-
           <br><br>
-
           <div class="ui medium buttons">
             <div class="ui button" id="resetStage4">Reset</div>
             <div class="or"></div>
             <div class="ui positive button" id="submitStage4">Submit</div>
           </div>
-          
           <br><br>
           <div class="ui green icon message" id="datePass">
             <i class="checkmark icon"></i>
@@ -350,7 +282,6 @@
               </div>
             </div>
           </div>
-
           <div class="ui red icon message" id="dateNotPass">
             <i class="remove icon"></i>
             <div class="content">
@@ -359,16 +290,11 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
-
     </div>
-
     <script src="common.js"></script>
     <script>
-
       var info = {
         'email': 'edyr96@hotmail.com',
         'github': 'https://github.com/eduardoramirez/code2040'
@@ -376,7 +302,11 @@
 
       var token = getToken(info);
 
+      /////////////////////////////////////////////////////////
       ////////////////////// Stage 1 //////////////////////////
+      /////////////////////////////////////////////////////////
+
+      // If button click grab data from server
       $('#fetchString').click(function(){
         $('#reversedLoc').val("");
         $('#stringLoc').toggleClass('loading');
@@ -388,6 +318,7 @@
         $('#reverseString').removeClass('disabled');
       });
 
+      // Reverse string if reverse is clicked
       $('#reverseString').click(function(){
         var string = $('#stringLoc').val();
         var reversed = stageI(string);
@@ -403,6 +334,7 @@
         }
       });
 
+      // Reset fields
       $('#resetStage1').click(function(){
         $('#reversedLoc').val("");
         $('#stringLoc').val("");
@@ -413,6 +345,7 @@
         $('#reverseString').addClass('disabled');
       });
 
+      // Send data to the server
       $('#submitStage1').click(function(){
         var reversed = $('#reversedLoc').val();
         var status;
@@ -430,8 +363,14 @@
         }
       });
 
+
+      /////////////////////////////////////////////////////////
       ////////////////////// Stage 2 //////////////////////////
+      /////////////////////////////////////////////////////////
+      
       var arr;
+
+      // Grab data from server
       $('#fetchDict').click(function(){
         $('#indexLoc').val("");
         $('#needleLoc').toggleClass('loading');
@@ -455,6 +394,7 @@
         $('#findNeedle').removeClass('disabled');
       });
     
+      // Find needle in hay
       $('#findNeedle').click(function(){
         var needle = $('#needleLoc').val();
         var index = stageII(needle, arr);
@@ -462,6 +402,7 @@
         $('#findNeedle').addClass('disabled');
       });
 
+      // Reset fields
       $('#resetStage2').click(function(){
         $('#needleLoc').val("");
         $('#haystackLoc').val("");
@@ -472,6 +413,7 @@
         $('#findNeedle').addClass('disabled');
       });
 
+      // Submite stage 2 data 
       $('#submitStage2').click(function(){
         var index = $('#indexLoc').val();
         var status;
@@ -489,9 +431,14 @@
         }
       });
 
+      /////////////////////////////////////////////////////////
       ////////////////////// Stage 3 //////////////////////////
+      /////////////////////////////////////////////////////////
+      
       var ar;
       var answer;
+
+      // Grab stage 3 data from server
       $('#fetchArray').click(function(){
         $('#answerLoc').val("");
         $('#prefixLoc').toggleClass('loading');
@@ -515,6 +462,7 @@
         $('#findPrefix').removeClass('disabled');
       });
 
+      // Find all words that dont begin with prefix
       $('#findPrefix').click(function(){
         var prefix = $('#prefixLoc').val();
 
@@ -536,6 +484,7 @@
         $('#findPrefix').addClass('disabled');
       });
 
+      // Reset fields
       $('#resetStage3').click(function(){
         $('#prefixLoc').val("");
         $('#answerLoc').val("");
@@ -545,6 +494,7 @@
         $('#findPrefix').addClass('disabled');
       });
 
+      // Submit stage 3 data
       $('#submitStage3').click(function(){
         var index = $('#answerLoc').val();
         var status;
@@ -563,9 +513,14 @@
         }
       });
 
-      ////////////////////// Stage 3 //////////////////////////
+      /////////////////////////////////////////////////////////
+      ////////////////////// Stage 4 //////////////////////////
+      /////////////////////////////////////////////////////////
+      
       var date;
       var newdate;
+
+      // Grab stage 4 data
       $('#fetchDate').click(function(){
         $('#newdateLoc').val("");
         $('#intervalLoc').toggleClass('loading');
@@ -581,6 +536,7 @@
         $('#newTime').removeClass('disabled');
       });
 
+      // Add interval to time
       $('#newTime').click(function(){
         var interval = parseInt($('#intervalLoc').val());
 
@@ -593,6 +549,7 @@
         $('#newTime').addClass('disabled');
       });
 
+      // Reset fields
       $('#resetStage4').click(function(){
         $('#intervalLoc').val("");
         $('#dateLoc').val("");
@@ -602,6 +559,7 @@
         $('#newTime').addClass('disabled');
       });
 
+      // Submit data for stage 4
       $('#submitStage4').click(function(){
         var d = $('#newdateLoc').val();
         var status;

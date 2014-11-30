@@ -18,17 +18,13 @@ def stageII(needle, haystack):
 # Return all elements that do not begin with prefix
 def stageIII(prefix, strings):
   toReturn = []
-
   for s in strings:
     if not s.startswith(prefix):
       toReturn.append(s)
-
   return toReturn
 
 # Add the interval to the date 
 def stageIV(interval, date):
   time = parser.parse(date)
-
   ti = time + timedelta(seconds=interval)
-
   return ti.isoformat()

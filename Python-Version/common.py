@@ -17,7 +17,7 @@ def getData(path, token):
   res = conn.getresponse()
   return json.loads(res.read())
 
-# Send data and check if passed
+# Send data and check if passed challenge
 def sendData(path, token, data):
   (key, val) = data
   dataToSend = json.dumps({'token': token, key: val})
