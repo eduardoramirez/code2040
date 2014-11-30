@@ -1,7 +1,9 @@
 code2040
 ========
+ 
+This is my solution to the CODE2040 API challenge. The UI for my solution is located at:
 
-This is my solution to the CODE2040 API challenge.
+http://eduardoramirez.github.io/code2040
 
 
 # Iterations
